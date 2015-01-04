@@ -859,7 +859,7 @@ Value getauxblock(const Array& params, bool fHelp)
         result.push_back(Pair("coinbasevalue", (int64_t)block.vtx[0].vout[0].nValue));
         result.push_back(Pair("bits", strprintf("%08x", block.nBits)));
         result.push_back(Pair("height", static_cast<int64_t> (pindexPrev->nHeight + 1)));
-        result.push_back(Pair("_target", HexStr(BEGIN(target), END(target))));
+        result.push_back(Pair("target", HexStr(BEGIN(target), END(target))));
 
         return result;
     }
